@@ -1,4 +1,12 @@
-﻿using System;
+﻿/* 这个作品是由404开发的一个命令行搜索工具，名为TermSeek。
+ * 它可以让用户输入搜索关键词，
+ * 并在预设的数据库中查找相关问题和答案。
+ * 用户可以通过输入具体编号来查看对应的答案。
+ * 点点点，TermSeek正在不断完善中，未来可能会加入更多功能和更大的数据库。
+ * 求关注404的GitHub主页，获取更多有趣的项目和工具。
+ * 还有 点一个赞，404会更有动力开发更多有趣的工具。
+*/
+using System;
 using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 namespace TermSeek
@@ -8,8 +16,16 @@ namespace TermSeek
         static void Main(string[] args)
         {
             //===========创建两个数据库对象============
-            string[] qstore = {"ns是什么？","你是什么？" };
-            string[] astore = { "ns是404开发的一个命令行语言", "我是TermSeek，一个搜索工具。" };
+            string[] qstore = {
+                "ns是什么？",
+                "你是什么？",
+                "404是谁？",
+            };
+            string[] astore = { 
+                "ns是404开发的一个命令行语言",
+                "我是TermSeek，一个搜索工具。",
+                "404是一个程序员，开发了ns语言和TermSeek搜索工具。"
+            };
             //===========创建辅助变量============
             int sv = qstore.Length;     //sv是数据库的长度 用于辅助查找
             int L = 0;    //L是搜索结果的编号
