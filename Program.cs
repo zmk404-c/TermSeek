@@ -2,10 +2,10 @@
  * TermSeek - 一个命令行搜索工具。
  * 作者: 404。
  * GitHub:zmk404-c/TermSeek。
- * 简化了搜索流程，方便在命令行中快速搜索和获取信息。
- * 后面预计加入管理员模式，支持自定义配置和插件。
- * 后面我会学习xml，然后加入xml配置文件，方便自定义搜索内容和插件。
- * 等我学会了windows窗体，我会加入一个图形界面，方便不熟悉命令行的用户使用。
+ * 我添加了一个开发者模式，可以在里面添加问题和答案。
+ *我打算给这个一个正式的版本
+ *现在是V1.0.0
+ *希望以后会更好
  */
 using System;
 
@@ -102,13 +102,15 @@ namespace TermSeek
                     while (true)
                     {
                         Console.Write("/n执行/ :");
-
+                        //============退出开发者模式============
                         string cmd = Console.ReadLine()!;
                         if (cmd == "</cmd>")
                         {
                             Console.WriteLine("已经退出开发者模式。");
                             break;
                         }
+                        //============开发者模式命令处理============
+                        //============命令帮助============
                         Console.WriteLine($"执行命令: {cmd}");
                         if (cmd == "help")
                         {
@@ -117,7 +119,8 @@ namespace TermSeek
                             Console.WriteLine("2. 输入help查看帮助信息。");
                             Console.WriteLine("3. 其他命令请自行探索。");
                         }
-                        else if(cmd=="term")
+                        //============添加数据库============
+                        else if (cmd=="term")
                         {
                             //输入格式介绍
                             Console.WriteLine("开始添加数据库");
